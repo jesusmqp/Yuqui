@@ -1,0 +1,1024 @@
+import pandas as pd
+
+# Lee el archivo Excel
+df = pd.read_excel('Tottus2.xlsx')
+
+# Ejemplo de cómo acceder a los datos: iterar sobre filas
+for index, row in df.iterrows():
+    print(row['Columna1'])  # Reemplaza 'Columna1' con el nombre de la columna en tuE 
+<!DOCTYPE html>
+
+<html lang="en-us" dir="ltr">
+<head>
+<title>Select product to change | Django site admin</title>
+<link rel="stylesheet" href="/static/admin/css/base.css">
+
+  <link rel="stylesheet" href="/static/admin/css/dark_mode.css">
+  <script src="/static/admin/js/theme.js" defer></script>
+
+
+  <link rel="stylesheet" href="/static/admin/css/nav_sidebar.css">
+  <script src="/static/admin/js/nav_sidebar.js" defer></script>
+
+
+  
+  <link rel="stylesheet" href="/static/admin/css/changelists.css">
+  
+  
+    <script src="/admin/jsi18n/"></script>
+  
+  
+  
+
+
+
+
+<script src="/static/admin/js/vendor/jquery/jquery.js"></script>
+<script src="/static/admin/js/jquery.init.js"></script>
+<script src="/static/admin/js/core.js"></script>
+<script src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script src="/static/admin/js/actions.js"></script>
+<script src="/static/admin/js/urlify.js"></script>
+<script src="/static/admin/js/prepopulate.js"></script>
+<script src="/static/admin/js/vendor/xregexp/xregexp.js"></script>
+<script src="/static/admin/js/filters.js" defer></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=" app-products model-product change-list"
+  data-admin-utc-offset="-18000">
+<a href="#content-start" class="skip-to-content-link">Skip to main content</a>
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+      <header id="header">
+        <div id="branding">
+        
+<div id="site-name"><a href="/admin/">Django administration</a></div>
+
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>admin-yucax86</strong>.
+            
+            
+                
+                    <a href="/">View site</a> /
+                
+                
+                    
+                    
+                
+                
+                <a href="/admin/password_change/">Change password</a> /
+                
+                <form id="logout-form" method="post" action="/admin/logout/">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="MH88Sr7PHrYhTqGK7iURvkyZxrxtnzIs3iFaelupyJC5zvD9av16DMiTr90MsHPj">
+                    <button type="submit">Log out</button>
+                </form>
+                
+<button class="theme-toggle">
+  <div class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</div>
+  <div class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</div>
+  <div class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</div>
+  <svg aria-hidden="true" class="theme-icon-when-auto">
+    <use xlink:href="#icon-auto" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-dark">
+    <use xlink:href="#icon-moon" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-light">
+    <use xlink:href="#icon-sun" />
+  </svg>
+</button>
+
+            
+        </div>
+        
+        
+        
+      </header>
+    
+    <!-- END Header -->
+    
+      <nav aria-label="Breadcrumbs">
+        
+<div class="breadcrumbs">
+<a href="/admin/">Home</a>
+&rsaquo; <a href="/admin/products/">Products</a>
+&rsaquo; Products
+</div>
+
+      </nav>
+    
+    
+
+    <div class="main" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky" id="nav-sidebar" aria-label="Sidebar">
+  <input type="search" id="nav-filter"
+         placeholder="Start typing to filter…"
+         aria-label="Filter navigation items">
+  
+
+
+  
+    <div class="app-account module">
+      <table>
+        <caption>
+          <a href="/admin/account/" class="section" title="Models in the Account application">Account</a>
+        </caption>
+        
+          <tr class="model-user">
+            
+              <th scope="row"><a href="/admin/account/user/">Users</a></th>
+            
+
+            
+              <td><a href="/admin/account/user/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-auth module">
+      <table>
+        <caption>
+          <a href="/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        
+          <tr class="model-group">
+            
+              <th scope="row"><a href="/admin/auth/group/">Groups</a></th>
+            
+
+            
+              <td><a href="/admin/auth/group/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-django_db_logger module">
+      <table>
+        <caption>
+          <a href="/admin/django_db_logger/" class="section" title="Models in the Db logging application">Db logging</a>
+        </caption>
+        
+          <tr class="model-statuslog">
+            
+              <th scope="row"><a href="/admin/django_db_logger/statuslog/">Logging</a></th>
+            
+
+            
+              <td><a href="/admin/django_db_logger/statuslog/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-price_comparator module">
+      <table>
+        <caption>
+          <a href="/admin/price_comparator/" class="section" title="Models in the Price_Comparator application">Price_Comparator</a>
+        </caption>
+        
+          <tr class="model-search">
+            
+              <th scope="row"><a href="/admin/price_comparator/search/">Searchs</a></th>
+            
+
+            
+              <td><a href="/admin/price_comparator/search/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-pricing module">
+      <table>
+        <caption>
+          <a href="/admin/pricing/" class="section" title="Models in the Pricing application">Pricing</a>
+        </caption>
+        
+          <tr class="model-pricecategory">
+            
+              <th scope="row"><a href="/admin/pricing/pricecategory/">Price categorys</a></th>
+            
+
+            
+              <td><a href="/admin/pricing/pricecategory/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-price">
+            
+              <th scope="row"><a href="/admin/pricing/price/">Prices</a></th>
+            
+
+            
+              <td><a href="/admin/pricing/price/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-productstore">
+            
+              <th scope="row"><a href="/admin/pricing/productstore/">Product stores</a></th>
+            
+
+            
+              <td><a href="/admin/pricing/productstore/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-products module current-app">
+      <table>
+        <caption>
+          <a href="/admin/products/" class="section" title="Models in the Products application">Products</a>
+        </caption>
+        
+          <tr class="model-brand">
+            
+              <th scope="row"><a href="/admin/products/brand/">Brands</a></th>
+            
+
+            
+              <td><a href="/admin/products/brand/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-category">
+            
+              <th scope="row"><a href="/admin/products/category/">Categorys</a></th>
+            
+
+            
+              <td><a href="/admin/products/category/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-product current-model">
+            
+              <th scope="row"><a href="/admin/products/product/" aria-current="page">Products</a></th>
+            
+
+            
+              <td><a href="/admin/products/product/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-shopping module">
+      <table>
+        <caption>
+          <a href="/admin/shopping/" class="section" title="Models in the Shopping application">Shopping</a>
+        </caption>
+        
+          <tr class="model-cart">
+            
+              <th scope="row"><a href="/admin/shopping/cart/">Carts</a></th>
+            
+
+            
+              <td><a href="/admin/shopping/cart/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-stores module">
+      <table>
+        <caption>
+          <a href="/admin/stores/" class="section" title="Models in the Stores application">Stores</a>
+        </caption>
+        
+          <tr class="model-store">
+            
+              <th scope="row"><a href="/admin/stores/store/">Stores</a></th>
+            
+
+            
+              <td><a href="/admin/stores/store/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <main id="content-start" class="content" tabindex="-1">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="">
+          
+          <h1>Select product to change</h1>
+          
+          
+  <div id="content-main">
+    
+        <ul class="object-tools">
+          
+            
+
+
+  
+  <li>
+    
+    <a href="/admin/products/product/add/?_changelist_filters=all%3D" class="addlink">
+      Add product
+    </a>
+  </li>
+  
+
+
+          
+        </ul>
+    
+    
+    <div class="module" id="changelist">
+      <div class="changelist-form-container">
+        
+
+<div id="toolbar"><form id="changelist-search" method="get" role="search">
+<div><!-- DIV needed for valid HTML -->
+<label for="searchbar"><img src="/static/admin/img/search.svg" alt="Search"></label>
+<input type="text" size="40" name="q" value="" id="searchbar">
+<input type="submit" value="Search">
+
+
+    <input type="hidden" name="all" value="">
+
+</div>
+
+</form></div>
+
+
+        
+
+        <form id="changelist-form" method="post" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="MH88Sr7PHrYhTqGK7iURvkyZxrxtnzIs3iFaelupyJC5zvD9av16DMiTr90MsHPj">
+        
+
+        
+          
+<div class="actions">
+  
+    
+    <label>Action: <select name="action" required>
+  <option value="" selected>---------</option>
+
+  <option value="delete_selected">Delete selected products</option>
+
+</select></label><input type="hidden" name="select_across" value="0" class="select-across">
+    
+    
+    <button type="submit" class="button" title="Run the selected action" name="index" value="0">Go</button>
+    
+    
+    
+        <span class="action-counter" data-actions-icnt="165">0 of 165 selected</span>
+        
+    
+    
+  
+</div>
+
+          
+
+
+<div class="results">
+<table id="result_list">
+<thead>
+<tr>
+
+<th scope="col" class="action-checkbox-column">
+   
+   <div class="text"><span><input type="checkbox" id="action-toggle" aria-label="Select all objects on this page for an action"></span></div>
+   <div class="clear"></div>
+</th>
+<th scope="col" class="sortable column-name sorted ascending">
+   
+       <div class="sortoptions">
+         <a class="sortremove" href="?all=&amp;o=-3" title="Remove from sorting"></a>
+         <span class="sortpriority" title="Sorting priority: 1">1</span>
+         <a href="?all=&amp;o=-1.-3" class="toggle ascending" title="Toggle sorting"></a>
+       </div>
+   
+   <div class="text"><a href="?all=&amp;o=-1.-3">Name</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col" class="sortable column-brand">
+   
+   <div class="text"><a href="?all=&amp;o=2.1.-3">Brand</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col" class="sortable column-created sorted descending">
+   
+       <div class="sortoptions">
+         <a class="sortremove" href="?all=&amp;o=1" title="Remove from sorting"></a>
+         <span class="sortpriority" title="Sorting priority: 2">2</span>
+         <a href="?all=&amp;o=1.3" class="toggle descending" title="Toggle sorting"></a>
+       </div>
+   
+   <div class="text"><a href="?all=&amp;o=3.1">Created</a></div>
+   <div class="clear"></div>
+</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="e26e448b-8725-43f0-8395-cbcd33ee9077" class="action-select" aria-label="Select this object for an action - ACEITE AEROSOL 170G"></td><th class="field-name"><a href="/admin/products/product/e26e448b-8725-43f0-8395-cbcd33ee9077/change/?_changelist_filters=all%3D">ACEITE AEROSOL 170G</a></th><td class="field-brand nowrap">Oleico</td><td class="field-created nowrap">July 11, 2024, 11:36 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="4919e886-a424-44b0-a30a-7a73ac9d54ee" class="action-select" aria-label="Select this object for an action - ACEITE BOTELLA 710ML"></td><th class="field-name"><a href="/admin/products/product/4919e886-a424-44b0-a30a-7a73ac9d54ee/change/?_changelist_filters=all%3D">ACEITE BOTELLA 710ML</a></th><td class="field-brand nowrap">Oleico</td><td class="field-created nowrap">July 11, 2024, 11:38 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3ad13bc9-31e3-487d-a829-45a6ce1546b9" class="action-select" aria-label="Select this object for an action - AJINOMEN VASO SABOR POLLO CON QUINUA 57 GR"></td><th class="field-name"><a href="/admin/products/product/3ad13bc9-31e3-487d-a829-45a6ce1546b9/change/?_changelist_filters=all%3D">AJINOMEN VASO SABOR POLLO CON QUINUA 57 GR</a></th><td class="field-brand nowrap">Ajinomoto</td><td class="field-created nowrap">July 12, 2024, 3:26 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="5fc240ec-068b-4b6e-b376-7d5be241caa5" class="action-select" aria-label="Select this object for an action - Aceite COSTEÑO Botella 900ml"></td><th class="field-name"><a href="/admin/products/product/5fc240ec-068b-4b6e-b376-7d5be241caa5/change/?_changelist_filters=all%3D">Aceite COSTEÑO Botella 900ml</a></th><td class="field-brand nowrap">Costeño</td><td class="field-created nowrap">July 19, 2024, 12:29 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="125ec048-bc76-417c-b750-9628cd5babb7" class="action-select" aria-label="Select this object for an action - Aceite De Ajonjolí Olivos Del Sur x 500 mL"></td><th class="field-name"><a href="/admin/products/product/125ec048-bc76-417c-b750-9628cd5babb7/change/?_changelist_filters=all%3D">Aceite De Ajonjolí Olivos Del Sur x 500 mL</a></th><td class="field-brand nowrap">Olivos Del Sur</td><td class="field-created nowrap">July 11, 2024, 11:41 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="7099f4d6-d5e7-4fa3-8f07-10640917f101" class="action-select" aria-label="Select this object for an action - Aceite De Coco Orgánico Extra Virgen x 300 mL"></td><th class="field-name"><a href="/admin/products/product/7099f4d6-d5e7-4fa3-8f07-10640917f101/change/?_changelist_filters=all%3D">Aceite De Coco Orgánico Extra Virgen x 300 mL</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 11, 2024, 11:43 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="da30ce8f-9341-4e29-9844-dbd2bba0bc66" class="action-select" aria-label="Select this object for an action - Aceite Girasol VALLENORTE Botella 900g"></td><th class="field-name"><a href="/admin/products/product/da30ce8f-9341-4e29-9844-dbd2bba0bc66/change/?_changelist_filters=all%3D">Aceite Girasol VALLENORTE Botella 900g</a></th><td class="field-brand nowrap">Vallenorte</td><td class="field-created nowrap">July 25, 2024, 6:02 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="5bcbd7d4-f521-49fa-97cb-e6fbde18db16" class="action-select" aria-label="Select this object for an action - Aceite Oleico en Botella de 946 mL"></td><th class="field-name"><a href="/admin/products/product/5bcbd7d4-f521-49fa-97cb-e6fbde18db16/change/?_changelist_filters=all%3D">Aceite Oleico en Botella de 946 mL</a></th><td class="field-brand nowrap">Oleico</td><td class="field-created nowrap">July 12, 2024, 12:25 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="abb4cb13-d3ec-41c6-8787-c72411c2e0ff" class="action-select" aria-label="Select this object for an action - Aceite Primor Clásico 1.8L"></td><th class="field-name"><a href="/admin/products/product/abb4cb13-d3ec-41c6-8787-c72411c2e0ff/change/?_changelist_filters=all%3D">Aceite Primor Clásico 1.8L</a></th><td class="field-brand nowrap">Primor</td><td class="field-created nowrap">July 12, 2024, 12:26 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="9ddfd1de-db2d-450e-be73-00c54834ffad" class="action-select" aria-label="Select this object for an action - Aceite Vegetal BELL&#x27;S Botella 900ml"></td><th class="field-name"><a href="/admin/products/product/9ddfd1de-db2d-450e-be73-00c54834ffad/change/?_changelist_filters=all%3D">Aceite Vegetal BELL&#x27;S Botella 900ml</a></th><td class="field-brand nowrap">Bell&#x27;s</td><td class="field-created nowrap">July 25, 2024, 6:03 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3e0dbcb6-6b4a-4e9f-9a9b-099218b9989a" class="action-select" aria-label="Select this object for an action - Aceite Vegetal COCINERO Botella 900ml"></td><th class="field-name"><a href="/admin/products/product/3e0dbcb6-6b4a-4e9f-9a9b-099218b9989a/change/?_changelist_filters=all%3D">Aceite Vegetal COCINERO Botella 900ml</a></th><td class="field-brand nowrap">Cocinero</td><td class="field-created nowrap">July 25, 2024, 6:19 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2e98e749-97fd-437b-8703-f603814d6ff8" class="action-select" aria-label="Select this object for an action - Aceite Vegetal DELEITE Premium Bidón 2L"></td><th class="field-name"><a href="/admin/products/product/2e98e749-97fd-437b-8703-f603814d6ff8/change/?_changelist_filters=all%3D">Aceite Vegetal DELEITE Premium Bidón 2L</a></th><td class="field-brand nowrap">Deleite</td><td class="field-created nowrap">July 25, 2024, 6:21 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="38424fbb-81fa-4a1b-a99d-fa8a89c730b7" class="action-select" aria-label="Select this object for an action - Aceite Vegetal DELEITE Premium Bidón 5L"></td><th class="field-name"><a href="/admin/products/product/38424fbb-81fa-4a1b-a99d-fa8a89c730b7/change/?_changelist_filters=all%3D">Aceite Vegetal DELEITE Premium Bidón 5L</a></th><td class="field-brand nowrap">Deleite</td><td class="field-created nowrap">July 25, 2024, 6:22 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2bd0b72c-3ff9-44ec-bfe2-18889f96184e" class="action-select" aria-label="Select this object for an action - Aceite Vegetal DELEITE Premium Botella 900ml"></td><th class="field-name"><a href="/admin/products/product/2bd0b72c-3ff9-44ec-bfe2-18889f96184e/change/?_changelist_filters=all%3D">Aceite Vegetal DELEITE Premium Botella 900ml</a></th><td class="field-brand nowrap">Deleite</td><td class="field-created nowrap">July 25, 2024, 6:44 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="db19bc54-70f8-4096-9aa0-a45e967bc78e" class="action-select" aria-label="Select this object for an action - Aceite Vegetal MAZOLA Canola y Girasol Spray 142g"></td><th class="field-name"><a href="/admin/products/product/db19bc54-70f8-4096-9aa0-a45e967bc78e/change/?_changelist_filters=all%3D">Aceite Vegetal MAZOLA Canola y Girasol Spray 142g</a></th><td class="field-brand nowrap">Mazola</td><td class="field-created nowrap">July 25, 2024, 6:58 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="e6eb2c0c-dd57-455a-a7bd-837a972bca46" class="action-select" aria-label="Select this object for an action - Aceite Vegetal Metro 900ml"></td><th class="field-name"><a href="/admin/products/product/e6eb2c0c-dd57-455a-a7bd-837a972bca46/change/?_changelist_filters=all%3D">Aceite Vegetal Metro 900ml</a></th><td class="field-brand nowrap">Metro</td><td class="field-created nowrap">July 4, 2024, 11:07 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="78c0b289-91d4-4a72-9e90-f74707d7de9a" class="action-select" aria-label="Select this object for an action - Aceite Vegetal Olivado HUERTO ALAMEIN Botella 900ml"></td><th class="field-name"><a href="/admin/products/product/78c0b289-91d4-4a72-9e90-f74707d7de9a/change/?_changelist_filters=all%3D">Aceite Vegetal Olivado HUERTO ALAMEIN Botella 900ml</a></th><td class="field-brand nowrap">Huerto Alamein</td><td class="field-created nowrap">July 25, 2024, 7:12 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="8cbb717e-6ee4-4569-aad0-1547af6059f0" class="action-select" aria-label="Select this object for an action - Aceite Vegetal Precio Uno 500mL"></td><th class="field-name"><a href="/admin/products/product/8cbb717e-6ee4-4569-aad0-1547af6059f0/change/?_changelist_filters=all%3D">Aceite Vegetal Precio Uno 500mL</a></th><td class="field-brand nowrap">Precio uno</td><td class="field-created nowrap">July 12, 2024, 12:40 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="58c12f15-96eb-4909-8f68-1f60f82aed80" class="action-select" aria-label="Select this object for an action - Aceite Vegetal Tottus 2L"></td><th class="field-name"><a href="/admin/products/product/58c12f15-96eb-4909-8f68-1f60f82aed80/change/?_changelist_filters=all%3D">Aceite Vegetal Tottus 2L</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 12, 2024, 1:44 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="10c8392a-0e9f-4055-a870-93ccdf4f82c4" class="action-select" aria-label="Select this object for an action - Aceite Vegetal Tottus 5L"></td><th class="field-name"><a href="/admin/products/product/10c8392a-0e9f-4055-a870-93ccdf4f82c4/change/?_changelist_filters=all%3D">Aceite Vegetal Tottus 5L</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 12, 2024, 1:14 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="b70118a8-fdf7-4c4d-840f-b711d8eb2ff0" class="action-select" aria-label="Select this object for an action - Aceite de Ajonjolí BELL&#x27;S SELECCIÓN Frasco 200ml"></td><th class="field-name"><a href="/admin/products/product/b70118a8-fdf7-4c4d-840f-b711d8eb2ff0/change/?_changelist_filters=all%3D">Aceite de Ajonjolí BELL&#x27;S SELECCIÓN Frasco 200ml</a></th><td class="field-brand nowrap">Bell&#x27;s Selección</td><td class="field-created nowrap">July 24, 2024, 12:47 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="610775f2-2c1e-4774-9c83-f82ffd7ab25d" class="action-select" aria-label="Select this object for an action - Aceite de Ajonjolí Olivos del Sur 200 mL"></td><th class="field-name"><a href="/admin/products/product/610775f2-2c1e-4774-9c83-f82ffd7ab25d/change/?_changelist_filters=all%3D">Aceite de Ajonjolí Olivos del Sur 200 mL</a></th><td class="field-brand nowrap">Olivos Del Sur</td><td class="field-created nowrap">July 11, 2024, 11:39 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3b03c449-e0c7-47dc-a539-706176d151c0" class="action-select" aria-label="Select this object for an action - Aceite de Ajonjolí y Soya BARCIDDA Botella 270ml"></td><th class="field-name"><a href="/admin/products/product/3b03c449-e0c7-47dc-a539-706176d151c0/change/?_changelist_filters=all%3D">Aceite de Ajonjolí y Soya BARCIDDA Botella 270ml</a></th><td class="field-brand nowrap">Barcidda</td><td class="field-created nowrap">July 24, 2024, 12:51 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="059b23d5-0c9d-49ba-9a16-e93a20c21e67" class="action-select" aria-label="Select this object for an action - Aceite de Canola en Aerosol PAM Original Frasco 170ml"></td><th class="field-name"><a href="/admin/products/product/059b23d5-0c9d-49ba-9a16-e93a20c21e67/change/?_changelist_filters=all%3D">Aceite de Canola en Aerosol PAM Original Frasco 170ml</a></th><td class="field-brand nowrap">Pam</td><td class="field-created nowrap">July 24, 2024, 12:53 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="adea0035-9bbd-4d23-9d70-48239f3eff5b" class="action-select" aria-label="Select this object for an action - Aceite de Girasol Tottus 900 mL"></td><th class="field-name"><a href="/admin/products/product/adea0035-9bbd-4d23-9d70-48239f3eff5b/change/?_changelist_filters=all%3D">Aceite de Girasol Tottus 900 mL</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 4, 2024, 10:56 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="9aa6ad89-d513-4ba7-879e-f83100e1c4e9" class="action-select" aria-label="Select this object for an action - Aceite de Maíz Original en Spray Pam 177 mL"></td><th class="field-name"><a href="/admin/products/product/9aa6ad89-d513-4ba7-879e-f83100e1c4e9/change/?_changelist_filters=all%3D">Aceite de Maíz Original en Spray Pam 177 mL</a></th><td class="field-brand nowrap">Pam</td><td class="field-created nowrap">July 11, 2024, 11:45 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="65055737-622b-47c6-8096-80105835c80d" class="action-select" aria-label="Select this object for an action - Aceite de Oliva 100% Puro Olivos del Sur 500 mL"></td><th class="field-name"><a href="/admin/products/product/65055737-622b-47c6-8096-80105835c80d/change/?_changelist_filters=all%3D">Aceite de Oliva 100% Puro Olivos del Sur 500 mL</a></th><td class="field-brand nowrap">Olivos Del Sur</td><td class="field-created nowrap">July 11, 2024, 11:53 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="e42e71c9-6d41-439a-988f-c6aca868d2f7" class="action-select" aria-label="Select this object for an action - Aceite de Oliva ACAVILLE Extra Virgen Gourmet Botella 250ml"></td><th class="field-name"><a href="/admin/products/product/e42e71c9-6d41-439a-988f-c6aca868d2f7/change/?_changelist_filters=all%3D">Aceite de Oliva ACAVILLE Extra Virgen Gourmet Botella 250ml</a></th><td class="field-brand nowrap">Acaville</td><td class="field-created nowrap">July 24, 2024, 1:04 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="31eb4135-a34e-478f-8cef-18d254e37c0c" class="action-select" aria-label="Select this object for an action - Aceite de Oliva ACAVILLE Extra Virgen Gourmet Botella 500ml"></td><th class="field-name"><a href="/admin/products/product/31eb4135-a34e-478f-8cef-18d254e37c0c/change/?_changelist_filters=all%3D">Aceite de Oliva ACAVILLE Extra Virgen Gourmet Botella 500ml</a></th><td class="field-brand nowrap">Acaville</td><td class="field-created nowrap">July 24, 2024, 2:05 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="a591e7a5-917f-4818-bb3e-25f1248b89cc" class="action-select" aria-label="Select this object for an action - Aceite de Oliva BELL&#x27;S Extra Virgen Botella 1L"></td><th class="field-name"><a href="/admin/products/product/a591e7a5-917f-4818-bb3e-25f1248b89cc/change/?_changelist_filters=all%3D">Aceite de Oliva BELL&#x27;S Extra Virgen Botella 1L</a></th><td class="field-brand nowrap">Bell&#x27;s</td><td class="field-created nowrap">July 24, 2024, 2:24 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="37629927-12ec-4921-abf6-f53ddac219ba" class="action-select" aria-label="Select this object for an action - Aceite de Oliva BELL&#x27;S Extra Virgen Botella 2L"></td><th class="field-name"><a href="/admin/products/product/37629927-12ec-4921-abf6-f53ddac219ba/change/?_changelist_filters=all%3D">Aceite de Oliva BELL&#x27;S Extra Virgen Botella 2L</a></th><td class="field-brand nowrap">Bell&#x27;s</td><td class="field-created nowrap">July 24, 2024, 6:08 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="50c4b29c-8e84-407c-97bf-8700e85e0f79" class="action-select" aria-label="Select this object for an action - Aceite de Oliva BELL&#x27;S Puro Botella 200ml"></td><th class="field-name"><a href="/admin/products/product/50c4b29c-8e84-407c-97bf-8700e85e0f79/change/?_changelist_filters=all%3D">Aceite de Oliva BELL&#x27;S Puro Botella 200ml</a></th><td class="field-brand nowrap">Bell&#x27;s</td><td class="field-created nowrap">July 24, 2024, 6:10 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="d3c6bfac-4661-4dd2-873c-ce132a25ab30" class="action-select" aria-label="Select this object for an action - Aceite de Oliva BELL&#x27;S Puro Botella 500ml"></td><th class="field-name"><a href="/admin/products/product/d3c6bfac-4661-4dd2-873c-ce132a25ab30/change/?_changelist_filters=all%3D">Aceite de Oliva BELL&#x27;S Puro Botella 500ml</a></th><td class="field-brand nowrap">Bell&#x27;s</td><td class="field-created nowrap">July 24, 2024, 6:11 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="5b082c06-77a0-464b-8f88-bb03d5264e6b" class="action-select" aria-label="Select this object for an action - Aceite de Oliva BELL&#x27;S Puro Botella 900ml"></td><th class="field-name"><a href="/admin/products/product/5b082c06-77a0-464b-8f88-bb03d5264e6b/change/?_changelist_filters=all%3D">Aceite de Oliva BELL&#x27;S Puro Botella 900ml</a></th><td class="field-brand nowrap">Bell&#x27;s</td><td class="field-created nowrap">July 24, 2024, 6:12 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="f0aae179-8a91-442f-8268-e6941b1a9522" class="action-select" aria-label="Select this object for an action - Aceite de Oliva BELL&#x27;S SELECCIÓN Extra Virgen Botella 1L"></td><th class="field-name"><a href="/admin/products/product/f0aae179-8a91-442f-8268-e6941b1a9522/change/?_changelist_filters=all%3D">Aceite de Oliva BELL&#x27;S SELECCIÓN Extra Virgen Botella 1L</a></th><td class="field-brand nowrap">Bell&#x27;s Selección</td><td class="field-created nowrap">July 24, 2024, 6:15 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="61747a72-866a-4e55-9d8f-69598c0d28df" class="action-select" aria-label="Select this object for an action - Aceite de Oliva BELL&#x27;S SELECCIÓN Extra Virgen Botella 500ml"></td><th class="field-name"><a href="/admin/products/product/61747a72-866a-4e55-9d8f-69598c0d28df/change/?_changelist_filters=all%3D">Aceite de Oliva BELL&#x27;S SELECCIÓN Extra Virgen Botella 500ml</a></th><td class="field-brand nowrap">Bell&#x27;s Selección</td><td class="field-created nowrap">July 24, 2024, 6:13 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="5707f0bd-abcd-4a5c-8171-cd119fdb9467" class="action-select" aria-label="Select this object for an action - Aceite de Oliva BELL&#x27;S Virgen Botella 900ml"></td><th class="field-name"><a href="/admin/products/product/5707f0bd-abcd-4a5c-8171-cd119fdb9467/change/?_changelist_filters=all%3D">Aceite de Oliva BELL&#x27;S Virgen Botella 900ml</a></th><td class="field-brand nowrap">Bell&#x27;s</td><td class="field-created nowrap">July 24, 2024, 6:17 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2768c327-db2c-470a-90ee-01e98c017c3a" class="action-select" aria-label="Select this object for an action - Aceite de Oliva CARBONELL Extra Virgen Spray 200ml"></td><th class="field-name"><a href="/admin/products/product/2768c327-db2c-470a-90ee-01e98c017c3a/change/?_changelist_filters=all%3D">Aceite de Oliva CARBONELL Extra Virgen Spray 200ml</a></th><td class="field-brand nowrap">Carbonell</td><td class="field-created nowrap">July 25, 2024, 5:52 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="9c169470-0cf0-450b-adc3-8bd02ff7c92a" class="action-select" aria-label="Select this object for an action - Aceite de Oliva CARBONELL Puro Frasco 200ml"></td><th class="field-name"><a href="/admin/products/product/9c169470-0cf0-450b-adc3-8bd02ff7c92a/change/?_changelist_filters=all%3D">Aceite de Oliva CARBONELL Puro Frasco 200ml</a></th><td class="field-brand nowrap">Carbonell</td><td class="field-created nowrap">July 25, 2024, 5:53 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="d850edaa-e263-4873-a229-7cdef8df0598" class="action-select" aria-label="Select this object for an action - Aceite de Oliva CARBONELL Sabor Afrutado Intenso Botella 500ml"></td><th class="field-name"><a href="/admin/products/product/d850edaa-e263-4873-a229-7cdef8df0598/change/?_changelist_filters=all%3D">Aceite de Oliva CARBONELL Sabor Afrutado Intenso Botella 500ml</a></th><td class="field-brand nowrap">Carbonell</td><td class="field-created nowrap">July 25, 2024, 6:01 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="35d61636-3638-4b2d-a76c-f0295610f070" class="action-select" aria-label="Select this object for an action - Aceite de Oliva Carbonel Extra Virgen 1 L"></td><th class="field-name"><a href="/admin/products/product/35d61636-3638-4b2d-a76c-f0295610f070/change/?_changelist_filters=all%3D">Aceite de Oliva Carbonel Extra Virgen 1 L</a></th><td class="field-brand nowrap">Carbonell</td><td class="field-created nowrap">July 11, 2024, 11:55 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="d374c423-e032-46eb-8d05-c1a0e89ce844" class="action-select" aria-label="Select this object for an action - Aceite de Oliva Extra Virgen El Olivar 250 mL"></td><th class="field-name"><a href="/admin/products/product/d374c423-e032-46eb-8d05-c1a0e89ce844/change/?_changelist_filters=all%3D">Aceite de Oliva Extra Virgen El Olivar 250 mL</a></th><td class="field-brand nowrap">El Olivar</td><td class="field-created nowrap">July 11, 2024, 11:57 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="5d0dc871-a6ca-48a4-824c-8f65049f784f" class="action-select" aria-label="Select this object for an action - Aceite de Oliva Extra Virgen El Olivar 500 mL"></td><th class="field-name"><a href="/admin/products/product/5d0dc871-a6ca-48a4-824c-8f65049f784f/change/?_changelist_filters=all%3D">Aceite de Oliva Extra Virgen El Olivar 500 mL</a></th><td class="field-brand nowrap">El Olivar</td><td class="field-created nowrap">July 11, 2024, 11:57 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="012ecc6e-9b2a-4f48-b574-18ee06ff7584" class="action-select" aria-label="Select this object for an action - Aceite de Oliva Extra Virgen Olivos del Sur 1L"></td><th class="field-name"><a href="/admin/products/product/012ecc6e-9b2a-4f48-b574-18ee06ff7584/change/?_changelist_filters=all%3D">Aceite de Oliva Extra Virgen Olivos del Sur 1L</a></th><td class="field-brand nowrap">Olivos Del Sur</td><td class="field-created nowrap">July 12, 2024, midnight</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="161166e9-20df-4d7b-8487-da543af8539e" class="action-select" aria-label="Select this object for an action - Aceite de Oliva Extra Virgen Olivos del Sur 200 mL"></td><th class="field-name"><a href="/admin/products/product/161166e9-20df-4d7b-8487-da543af8539e/change/?_changelist_filters=all%3D">Aceite de Oliva Extra Virgen Olivos del Sur 200 mL</a></th><td class="field-brand nowrap">Olivos Del Sur</td><td class="field-created nowrap">July 12, 2024, 12:02 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2d8501c7-e80f-4016-ad95-77cde7b5634e" class="action-select" aria-label="Select this object for an action - Aceite de Oliva Extra Virgen Olivos del Sur 500 mL"></td><th class="field-name"><a href="/admin/products/product/2d8501c7-e80f-4016-ad95-77cde7b5634e/change/?_changelist_filters=all%3D">Aceite de Oliva Extra Virgen Olivos del Sur 500 mL</a></th><td class="field-brand nowrap">Olivos Del Sur</td><td class="field-created nowrap">July 12, 2024, 12:03 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="d44fb532-5b17-44f3-9702-01d98b2c08b2" class="action-select" aria-label="Select this object for an action - Aceite de Oliva Extra Virgen Tottus 1 L"></td><th class="field-name"><a href="/admin/products/product/d44fb532-5b17-44f3-9702-01d98b2c08b2/change/?_changelist_filters=all%3D">Aceite de Oliva Extra Virgen Tottus 1 L</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 4, 2024, 11:50 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="dd674830-44b6-4549-a52a-111846df6f4d" class="action-select" aria-label="Select this object for an action - Aceite de Oliva Extra Virgen Tottus 2 L"></td><th class="field-name"><a href="/admin/products/product/dd674830-44b6-4549-a52a-111846df6f4d/change/?_changelist_filters=all%3D">Aceite de Oliva Extra Virgen Tottus 2 L</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 12, 2024, 12:04 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="e279ebd0-3dfc-4783-9f58-b9efdb557a22" class="action-select" aria-label="Select this object for an action - Aceite de Oliva Pam 198 g"></td><th class="field-name"><a href="/admin/products/product/e279ebd0-3dfc-4783-9f58-b9efdb557a22/change/?_changelist_filters=all%3D">Aceite de Oliva Pam 198 g</a></th><td class="field-brand nowrap">Pam</td><td class="field-created nowrap">July 12, 2024, 12:05 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3ef7047d-c50f-4b23-af8d-7b71978196da" class="action-select" aria-label="Select this object for an action - Aceite de Oliva Puro El Olivar 500 mL"></td><th class="field-name"><a href="/admin/products/product/3ef7047d-c50f-4b23-af8d-7b71978196da/change/?_changelist_filters=all%3D">Aceite de Oliva Puro El Olivar 500 mL</a></th><td class="field-brand nowrap">El Olivar</td><td class="field-created nowrap">July 12, 2024, 12:08 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="307296fb-0937-4305-939a-00d5034d64b8" class="action-select" aria-label="Select this object for an action - Aceite de Oliva Sabor Intenso El Olivar 500 mL"></td><th class="field-name"><a href="/admin/products/product/307296fb-0937-4305-939a-00d5034d64b8/change/?_changelist_filters=all%3D">Aceite de Oliva Sabor Intenso El Olivar 500 mL</a></th><td class="field-brand nowrap">El Olivar</td><td class="field-created nowrap">July 12, 2024, 12:09 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="88a30324-06db-4a4e-b064-cbdd7f2f3108" class="action-select" aria-label="Select this object for an action - Aceite de Soya Precio Uno 900 mL"></td><th class="field-name"><a href="/admin/products/product/88a30324-06db-4a4e-b064-cbdd7f2f3108/change/?_changelist_filters=all%3D">Aceite de Soya Precio Uno 900 mL</a></th><td class="field-brand nowrap">Precio uno</td><td class="field-created nowrap">July 4, 2024, 10:44 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="ba980679-57c8-4ffd-bf0b-e5592d808f84" class="action-select" aria-label="Select this object for an action - Aceite de Soya Sao 900ml"></td><th class="field-name"><a href="/admin/products/product/ba980679-57c8-4ffd-bf0b-e5592d808f84/change/?_changelist_filters=all%3D">Aceite de Soya Sao 900ml</a></th><td class="field-brand nowrap">Sao</td><td class="field-created nowrap">July 4, 2024, 10:33 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="cac862e5-06e3-4af4-b50f-4aa6f8e16b6f" class="action-select" aria-label="Select this object for an action - Aceite en spray Butter Pam de 141 g"></td><th class="field-name"><a href="/admin/products/product/cac862e5-06e3-4af4-b50f-4aa6f8e16b6f/change/?_changelist_filters=all%3D">Aceite en spray Butter Pam de 141 g</a></th><td class="field-brand nowrap">Pam</td><td class="field-created nowrap">July 12, 2024, 12:24 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="96abe6ae-3f83-4d55-b5d6-8066f751b1ae" class="action-select" aria-label="Select this object for an action - Aceite vegetal Primor Premium de 900 mL"></td><th class="field-name"><a href="/admin/products/product/96abe6ae-3f83-4d55-b5d6-8066f751b1ae/change/?_changelist_filters=all%3D">Aceite vegetal Primor Premium de 900 mL</a></th><td class="field-brand nowrap">Primor</td><td class="field-created nowrap">July 12, 2024, 1:13 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="888fb011-63b6-4357-b050-d85858962a25" class="action-select" aria-label="Select this object for an action - Aceite vegetal Primor de 900 mL"></td><th class="field-name"><a href="/admin/products/product/888fb011-63b6-4357-b050-d85858962a25/change/?_changelist_filters=all%3D">Aceite vegetal Primor de 900 mL</a></th><td class="field-brand nowrap">Primor</td><td class="field-created nowrap">July 3, 2024, 11:30 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0b2d5fab-4e5f-4cbc-95ea-b864e4d1b442" class="action-select" aria-label="Select this object for an action - Aceite vegetal Tottus de 900 mL"></td><th class="field-name"><a href="/admin/products/product/0b2d5fab-4e5f-4cbc-95ea-b864e4d1b442/change/?_changelist_filters=all%3D">Aceite vegetal Tottus de 900 mL</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 12, 2024, 1:41 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="d6d2ec3b-c8f5-47d2-8d3e-ccd6596e8c17" class="action-select" aria-label="Select this object for an action - Aceituna Botija en Rodajas HUERTO MEJÍA Paquete 220g"></td><th class="field-name"><a href="/admin/products/product/d6d2ec3b-c8f5-47d2-8d3e-ccd6596e8c17/change/?_changelist_filters=all%3D">Aceituna Botija en Rodajas HUERTO MEJÍA Paquete 220g</a></th><td class="field-brand nowrap">Huerto Mejía</td><td class="field-created nowrap">July 25, 2024, 7:18 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="514704df-3cb6-43ee-9858-105aaba8accb" class="action-select" aria-label="Select this object for an action - Aceituna EL CORTE INGLÉS Manzanilla Gazpacha Frasco 500g"></td><th class="field-name"><a href="/admin/products/product/514704df-3cb6-43ee-9858-105aaba8accb/change/?_changelist_filters=all%3D">Aceituna EL CORTE INGLÉS Manzanilla Gazpacha Frasco 500g</a></th><td class="field-brand nowrap">El Corte Inglés</td><td class="field-created nowrap">July 25, 2024, 7:21 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="7964081b-351f-4b57-a395-66bb47bb6f6f" class="action-select" aria-label="Select this object for an action - Aceituna Manzanilla VALDEPORRES con Pimiento Frasco 370g"></td><th class="field-name"><a href="/admin/products/product/7964081b-351f-4b57-a395-66bb47bb6f6f/change/?_changelist_filters=all%3D">Aceituna Manzanilla VALDEPORRES con Pimiento Frasco 370g</a></th><td class="field-brand nowrap">Valdeporres</td><td class="field-created nowrap">July 25, 2024, 7:22 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="f443677a-986f-4233-a330-df545fbaf6e6" class="action-select" aria-label="Select this object for an action - Ajo Molido Piki 350 g"></td><th class="field-name"><a href="/admin/products/product/f443677a-986f-4233-a330-df545fbaf6e6/change/?_changelist_filters=all%3D">Ajo Molido Piki 350 g</a></th><td class="field-brand nowrap">Piki</td><td class="field-created nowrap">July 12, 2024, 3:53 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="8f903873-b814-4ea5-92ea-02a434df2b54" class="action-select" aria-label="Select this object for an action - Ajo Molido Sibarita 3 Unidades 72 g"></td><th class="field-name"><a href="/admin/products/product/8f903873-b814-4ea5-92ea-02a434df2b54/change/?_changelist_filters=all%3D">Ajo Molido Sibarita 3 Unidades 72 g</a></th><td class="field-brand nowrap">Sibarita</td><td class="field-created nowrap">July 12, 2024, 4:01 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="52326866-d364-4eb1-a2c5-a8a43d1c42ae" class="action-select" aria-label="Select this object for an action - Ajo en Polvo Badia 85.5 g"></td><th class="field-name"><a href="/admin/products/product/52326866-d364-4eb1-a2c5-a8a43d1c42ae/change/?_changelist_filters=all%3D">Ajo en Polvo Badia 85.5 g</a></th><td class="field-brand nowrap">Badia</td><td class="field-created nowrap">July 12, 2024, 3:33 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="8d24783b-4630-4183-81a4-04fb3ec35408" class="action-select" aria-label="Select this object for an action - Ajo molido Sibarita Siba de 250 g"></td><th class="field-name"><a href="/admin/products/product/8d24783b-4630-4183-81a4-04fb3ec35408/change/?_changelist_filters=all%3D">Ajo molido Sibarita Siba de 250 g</a></th><td class="field-brand nowrap">Sibarita</td><td class="field-created nowrap">July 12, 2024, 4:09 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="4ded5cb2-45cd-46a3-90ce-9b0fc9a723a4" class="action-select" aria-label="Select this object for an action - Ajonjolí Tottus 20 g"></td><th class="field-name"><a href="/admin/products/product/4ded5cb2-45cd-46a3-90ce-9b0fc9a723a4/change/?_changelist_filters=all%3D">Ajonjolí Tottus 20 g</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 12, 2024, 4:15 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="71d3ecf5-b7d7-49ab-8a12-edebe5d6fbfa" class="action-select" aria-label="Select this object for an action - Ajos en polvo Tottus de 50 g"></td><th class="field-name"><a href="/admin/products/product/71d3ecf5-b7d7-49ab-8a12-edebe5d6fbfa/change/?_changelist_filters=all%3D">Ajos en polvo Tottus de 50 g</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 12, 2024, 4:17 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="637688ff-8c24-4f88-a966-e26fb0db14b2" class="action-select" aria-label="Select this object for an action - Ajos molidos Tottus 215 g"></td><th class="field-name"><a href="/admin/products/product/637688ff-8c24-4f88-a966-e26fb0db14b2/change/?_changelist_filters=all%3D">Ajos molidos Tottus 215 g</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 12, 2024, 7:49 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="15308533-3987-48d8-8732-3c7b50169492" class="action-select" aria-label="Select this object for an action - Ají De La Casa Tottus x 200 g"></td><th class="field-name"><a href="/admin/products/product/15308533-3987-48d8-8732-3c7b50169492/change/?_changelist_filters=all%3D">Ají De La Casa Tottus x 200 g</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 12, 2024, 8:14 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="7eba9e92-0470-499d-b56d-8cc4c96ca252" class="action-select" aria-label="Select this object for an action - Alcachofa a la parrilla Casa Verde 220 g"></td><th class="field-name"><a href="/admin/products/product/7eba9e92-0470-499d-b56d-8cc4c96ca252/change/?_changelist_filters=all%3D">Alcachofa a la parrilla Casa Verde 220 g</a></th><td class="field-brand nowrap">Casa Verde</td><td class="field-created nowrap">July 12, 2024, 8:19 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="e0732377-f929-4012-a009-f03c30c93b05" class="action-select" aria-label="Select this object for an action - Anchoveta En Aceite Vegetal Santorini x 125 g"></td><th class="field-name"><a href="/admin/products/product/e0732377-f929-4012-a009-f03c30c93b05/change/?_changelist_filters=all%3D">Anchoveta En Aceite Vegetal Santorini x 125 g</a></th><td class="field-brand nowrap">Santorini</td><td class="field-created nowrap">July 12, 2024, 11:54 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="89a8f1e7-9f07-41ad-8b63-52feff5f8157" class="action-select" aria-label="Select this object for an action - Anchoveta en Aceite de Oliva Santorini 125g"></td><th class="field-name"><a href="/admin/products/product/89a8f1e7-9f07-41ad-8b63-52feff5f8157/change/?_changelist_filters=all%3D">Anchoveta en Aceite de Oliva Santorini 125g</a></th><td class="field-brand nowrap">Santorini</td><td class="field-created nowrap">July 12, 2024, 8:30 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="a5e2d187-7223-4556-a0f8-7f0e04c19934" class="action-select" aria-label="Select this object for an action - Arroz Arborio SCOTTI Caja 1Kg"></td><th class="field-name"><a href="/admin/products/product/a5e2d187-7223-4556-a0f8-7f0e04c19934/change/?_changelist_filters=all%3D">Arroz Arborio SCOTTI Caja 1Kg</a></th><td class="field-brand nowrap">Scotti</td><td class="field-created nowrap">July 30, 2024, 10:42 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="a074b834-a1ba-41c4-b24f-2ab76a7e2583" class="action-select" aria-label="Select this object for an action - Arroz Añejo Amarillo FARAÓN G3 Bolsa 1Kg"></td><th class="field-name"><a href="/admin/products/product/a074b834-a1ba-41c4-b24f-2ab76a7e2583/change/?_changelist_filters=all%3D">Arroz Añejo Amarillo FARAÓN G3 Bolsa 1Kg</a></th><td class="field-brand nowrap">Faraón</td><td class="field-created nowrap">July 30, 2024, 10:33 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="4be309af-592c-4807-86eb-420316d97e01" class="action-select" aria-label="Select this object for an action - Arroz Añejo Extra COSTEÑO Bolsa 750g"></td><th class="field-name"><a href="/admin/products/product/4be309af-592c-4807-86eb-420316d97e01/change/?_changelist_filters=all%3D">Arroz Añejo Extra COSTEÑO Bolsa 750g</a></th><td class="field-brand nowrap">Costeño</td><td class="field-created nowrap">July 30, 2024, 10:41 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="398a128a-edbc-44e9-9485-d44d6686b1a4" class="action-select" aria-label="Select this object for an action - Arroz Añejo Pacasmayo 5 Kg"></td><th class="field-name"><a href="/admin/products/product/398a128a-edbc-44e9-9485-d44d6686b1a4/change/?_changelist_filters=all%3D">Arroz Añejo Pacasmayo 5 Kg</a></th><td class="field-brand nowrap">Pacasmayo</td><td class="field-created nowrap">July 12, 2024, 11:57 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="7e916f4c-c6c7-4dac-9ed6-9c90531cb5e9" class="action-select" aria-label="Select this object for an action - Arroz Añejo Pacasmayo 750 g"></td><th class="field-name"><a href="/admin/products/product/7e916f4c-c6c7-4dac-9ed6-9c90531cb5e9/change/?_changelist_filters=all%3D">Arroz Añejo Pacasmayo 750 g</a></th><td class="field-brand nowrap">Pacasmayo</td><td class="field-created nowrap">July 12, 2024, 11:59 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="d4be4e70-96c6-4ed7-b740-812bd234e326" class="action-select" aria-label="Select this object for an action - Arroz BELL&#x27;S Familiar Bolsa 5Kg"></td><th class="field-name"><a href="/admin/products/product/d4be4e70-96c6-4ed7-b740-812bd234e326/change/?_changelist_filters=all%3D">Arroz BELL&#x27;S Familiar Bolsa 5Kg</a></th><td class="field-brand nowrap">Bell&#x27;s</td><td class="field-created nowrap">July 30, 2024, 10:44 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="8e284991-0a7e-4936-a7df-a69f1edff96e" class="action-select" aria-label="Select this object for an action - Arroz BELL&#x27;S Familiar Bolsa 750g"></td><th class="field-name"><a href="/admin/products/product/8e284991-0a7e-4936-a7df-a69f1edff96e/change/?_changelist_filters=all%3D">Arroz BELL&#x27;S Familiar Bolsa 750g</a></th><td class="field-brand nowrap">Bell&#x27;s</td><td class="field-created nowrap">July 30, 2024, 10:45 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="d2296a66-8901-477f-a6a8-9c7a10653aea" class="action-select" aria-label="Select this object for an action - Arroz Basmati SCOTTI Caja 500 g"></td><th class="field-name"><a href="/admin/products/product/d2296a66-8901-477f-a6a8-9c7a10653aea/change/?_changelist_filters=all%3D">Arroz Basmati SCOTTI Caja 500 g</a></th><td class="field-brand nowrap">Scotti</td><td class="field-created nowrap">July 30, 2024, 10:44 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="7db2142a-f66e-464f-9c31-69f4be777299" class="action-select" aria-label="Select this object for an action - Arroz Carnaroli SCOTTI con Trufas Bolsa 210g"></td><th class="field-name"><a href="/admin/products/product/7db2142a-f66e-464f-9c31-69f4be777299/change/?_changelist_filters=all%3D">Arroz Carnaroli SCOTTI con Trufas Bolsa 210g</a></th><td class="field-brand nowrap">Scotti</td><td class="field-created nowrap">July 30, 2024, 10:46 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="a11e5a85-7627-4183-8258-a52848b9b838" class="action-select" aria-label="Select this object for an action - Arroz Costeño Añejo Extra Costeño 5 Kg"></td><th class="field-name"><a href="/admin/products/product/a11e5a85-7627-4183-8258-a52848b9b838/change/?_changelist_filters=all%3D">Arroz Costeño Añejo Extra Costeño 5 Kg</a></th><td class="field-brand nowrap">Costeño</td><td class="field-created nowrap">July 13, 2024, 12:01 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="87048b59-f7eb-4288-ac29-2b584e38993b" class="action-select" aria-label="Select this object for an action - Arroz Extra Añejo FARAON Naranja Bolsa 5kg"></td><th class="field-name"><a href="/admin/products/product/87048b59-f7eb-4288-ac29-2b584e38993b/change/?_changelist_filters=all%3D">Arroz Extra Añejo FARAON Naranja Bolsa 5kg</a></th><td class="field-brand nowrap">Faraon</td><td class="field-created nowrap">July 30, 2024, 10:50 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="e5c4f998-75b4-4146-abcd-f9cfc97c1ef6" class="action-select" aria-label="Select this object for an action - Arroz Extra Añejo Tottus 5 kg"></td><th class="field-name"><a href="/admin/products/product/e5c4f998-75b4-4146-abcd-f9cfc97c1ef6/change/?_changelist_filters=all%3D">Arroz Extra Añejo Tottus 5 kg</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 13, 2024, 12:05 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="f1c9f360-73f6-4393-9250-9c1c418b2756" class="action-select" aria-label="Select this object for an action - Arroz Extra Añejo Tottus Premium 750 g"></td><th class="field-name"><a href="/admin/products/product/f1c9f360-73f6-4393-9250-9c1c418b2756/change/?_changelist_filters=all%3D">Arroz Extra Añejo Tottus Premium 750 g</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 13, 2024, 12:07 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="961ba2db-c7a8-4d7e-b5ec-59a4ed670f2b" class="action-select" aria-label="Select this object for an action - Arroz Extra BELL&#x27;S Bolsa 5Kg"></td><th class="field-name"><a href="/admin/products/product/961ba2db-c7a8-4d7e-b5ec-59a4ed670f2b/change/?_changelist_filters=all%3D">Arroz Extra BELL&#x27;S Bolsa 5Kg</a></th><td class="field-brand nowrap">Bell&#x27;s</td><td class="field-created nowrap">July 30, 2024, 10:51 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="932aeab9-c381-4f08-b09b-fd36ea82071e" class="action-select" aria-label="Select this object for an action - Arroz Extra BELL&#x27;S Bolsa 750g"></td><th class="field-name"><a href="/admin/products/product/932aeab9-c381-4f08-b09b-fd36ea82071e/change/?_changelist_filters=all%3D">Arroz Extra BELL&#x27;S Bolsa 750g</a></th><td class="field-brand nowrap">Bell&#x27;s</td><td class="field-created nowrap">July 30, 2024, 10:51 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="863e06fd-6af6-44bb-a5d8-8a3ea964c28a" class="action-select" aria-label="Select this object for an action - Arroz Extra BELL&#x27;S Selección Bolsa 750g"></td><th class="field-name"><a href="/admin/products/product/863e06fd-6af6-44bb-a5d8-8a3ea964c28a/change/?_changelist_filters=all%3D">Arroz Extra BELL&#x27;S Selección Bolsa 750g</a></th><td class="field-brand nowrap">Bell&#x27;s</td><td class="field-created nowrap">July 30, 2024, 10:52 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="eb3cccf2-39aa-44c7-a2a7-2407905d2981" class="action-select" aria-label="Select this object for an action - Arroz Extra Costeño 5 kg"></td><th class="field-name"><a href="/admin/products/product/eb3cccf2-39aa-44c7-a2a7-2407905d2981/change/?_changelist_filters=all%3D">Arroz Extra Costeño 5 kg</a></th><td class="field-brand nowrap">Costeño</td><td class="field-created nowrap">June 28, 2024, 12:53 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="efcfaaee-b514-4cfa-84ad-e582c4e86bfe" class="action-select" aria-label="Select this object for an action - Arroz Extra Faraón 750 g"></td><th class="field-name"><a href="/admin/products/product/efcfaaee-b514-4cfa-84ad-e582c4e86bfe/change/?_changelist_filters=all%3D">Arroz Extra Faraón 750 g</a></th><td class="field-brand nowrap">Faraon</td><td class="field-created nowrap">July 13, 2024, 12:26 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="6f621d54-c3bd-46f4-9d40-bbd85c9cda55" class="action-select" aria-label="Select this object for an action - Arroz Extra Gran Añejo CHALAN Bolsa 5Kg"></td><th class="field-name"><a href="/admin/products/product/6f621d54-c3bd-46f4-9d40-bbd85c9cda55/change/?_changelist_filters=all%3D">Arroz Extra Gran Añejo CHALAN Bolsa 5Kg</a></th><td class="field-brand nowrap">Gran Chalan</td><td class="field-created nowrap">July 30, 2024, 10:58 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="6962574a-60da-4f3d-b3ab-6dae82e3f446" class="action-select" aria-label="Select this object for an action - Arroz Extra Natural 750 g"></td><th class="field-name"><a href="/admin/products/product/6962574a-60da-4f3d-b3ab-6dae82e3f446/change/?_changelist_filters=all%3D">Arroz Extra Natural 750 g</a></th><td class="field-brand nowrap">Gran Chalan</td><td class="field-created nowrap">July 13, 2024, 12:31 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="89edae32-b571-48b8-b3d5-3d36087ab4e1" class="action-select" aria-label="Select this object for an action - Arroz Extra PAISANA Bolsa 1Kg"></td><th class="field-name"><a href="/admin/products/product/89edae32-b571-48b8-b3d5-3d36087ab4e1/change/?_changelist_filters=all%3D">Arroz Extra PAISANA Bolsa 1Kg</a></th><td class="field-brand nowrap">Paisana</td><td class="field-created nowrap">July 30, 2024, 10:59 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="69fc0354-6503-4d29-87e3-668cf9e57c7e" class="action-select" aria-label="Select this object for an action - Arroz Extra Pacasmayo 5Kg"></td><th class="field-name"><a href="/admin/products/product/69fc0354-6503-4d29-87e3-668cf9e57c7e/change/?_changelist_filters=all%3D">Arroz Extra Pacasmayo 5Kg</a></th><td class="field-brand nowrap">Pacasmayo</td><td class="field-created nowrap">July 13, 2024, 12:33 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="25eb7ecd-f5e5-4878-a6dc-76e4e2a5952a" class="action-select" aria-label="Select this object for an action - Arroz Extra Pacasmayo 750 g"></td><th class="field-name"><a href="/admin/products/product/25eb7ecd-f5e5-4878-a6dc-76e4e2a5952a/change/?_changelist_filters=all%3D">Arroz Extra Pacasmayo 750 g</a></th><td class="field-brand nowrap">Pacasmayo</td><td class="field-created nowrap">July 13, 2024, 12:35 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="5b11c8a6-4ec2-4498-b62f-f8d377d4c0bd" class="action-select" aria-label="Select this object for an action - Arroz Extra Tottus 5 kg"></td><th class="field-name"><a href="/admin/products/product/5b11c8a6-4ec2-4498-b62f-f8d377d4c0bd/change/?_changelist_filters=all%3D">Arroz Extra Tottus 5 kg</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 13, 2024, 12:36 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="840d46bf-55a5-4b7c-9efa-0bef7e8807d1" class="action-select" aria-label="Select this object for an action - Arroz Extra Tottus 750 g"></td><th class="field-name"><a href="/admin/products/product/840d46bf-55a5-4b7c-9efa-0bef7e8807d1/change/?_changelist_filters=all%3D">Arroz Extra Tottus 750 g</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 13, 2024, 12:37 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="875d0fc7-effa-41f2-b8ac-045bf64a5213" class="action-select" aria-label="Select this object for an action - Arroz Extra VALLENORTE Gran Reserva Bolsa 5Kg"></td><th class="field-name"><a href="/admin/products/product/875d0fc7-effa-41f2-b8ac-045bf64a5213/change/?_changelist_filters=all%3D">Arroz Extra VALLENORTE Gran Reserva Bolsa 5Kg</a></th><td class="field-brand nowrap">Vallenorte</td><td class="field-created nowrap">July 30, 2024, 11 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="f9c34abb-9a38-42b4-bc92-95f541962522" class="action-select" aria-label="Select this object for an action - Arroz Extra Valle Norte 5 kg"></td><th class="field-name"><a href="/admin/products/product/f9c34abb-9a38-42b4-bc92-95f541962522/change/?_changelist_filters=all%3D">Arroz Extra Valle Norte 5 kg</a></th><td class="field-brand nowrap">Vallenorte</td><td class="field-created nowrap">July 13, 2024, 12:39 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="7467947f-84df-497c-a3da-4e45d0c75ec9" class="action-select" aria-label="Select this object for an action - Arroz Extra Valle Norte 750 g"></td><th class="field-name"><a href="/admin/products/product/7467947f-84df-497c-a3da-4e45d0c75ec9/change/?_changelist_filters=all%3D">Arroz Extra Valle Norte 750 g</a></th><td class="field-brand nowrap">Vallenorte</td><td class="field-created nowrap">July 13, 2024, 12:40 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="75f66eba-f6ad-40b5-8429-ffb9090e1fd6" class="action-select" aria-label="Select this object for an action - Arroz Extra de 1 Kg"></td><th class="field-name"><a href="/admin/products/product/75f66eba-f6ad-40b5-8429-ffb9090e1fd6/change/?_changelist_filters=all%3D">Arroz Extra de 1 Kg</a></th><td class="field-brand nowrap">Paisana</td><td class="field-created nowrap">July 13, 2024, 12:23 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="79c0a903-b855-46f6-8b34-cb9a6a07bbf3" class="action-select" aria-label="Select this object for an action - Arroz Faraon Extra Añejo Naranja Bolsa 5 kg"></td><th class="field-name"><a href="/admin/products/product/79c0a903-b855-46f6-8b34-cb9a6a07bbf3/change/?_changelist_filters=all%3D">Arroz Faraon Extra Añejo Naranja Bolsa 5 kg</a></th><td class="field-brand nowrap">Faraon</td><td class="field-created nowrap">July 4, 2024, 10:14 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3556d27f-06c4-45ea-8469-625bf9d8cc11" class="action-select" aria-label="Select this object for an action - Arroz Gourmet Extra Añejo Gran Chalán de 5 Kg"></td><th class="field-name"><a href="/admin/products/product/3556d27f-06c4-45ea-8469-625bf9d8cc11/change/?_changelist_filters=all%3D">Arroz Gourmet Extra Añejo Gran Chalán de 5 Kg</a></th><td class="field-brand nowrap">Gran Chalan</td><td class="field-created nowrap">July 13, 2024, 12:42 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="b9d9f2ac-e00a-4539-9124-92c3d8d0f298" class="action-select" aria-label="Select this object for an action - Arroz Integral Gran Chalán x 750 g"></td><th class="field-name"><a href="/admin/products/product/b9d9f2ac-e00a-4539-9124-92c3d8d0f298/change/?_changelist_filters=all%3D">Arroz Integral Gran Chalán x 750 g</a></th><td class="field-brand nowrap">Gran Chalan</td><td class="field-created nowrap">July 13, 2024, 12:44 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="7d3edb79-c051-4d69-b0b6-7c805151b5d5" class="action-select" aria-label="Select this object for an action - Arroz Integral Tottus 5 kg"></td><th class="field-name"><a href="/admin/products/product/7d3edb79-c051-4d69-b0b6-7c805151b5d5/change/?_changelist_filters=all%3D">Arroz Integral Tottus 5 kg</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 13, 2024, 12:45 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="d10361c0-d856-4499-af37-74c388fb8581" class="action-select" aria-label="Select this object for an action - Arroz Integral Vallenorte 750 g"></td><th class="field-name"><a href="/admin/products/product/d10361c0-d856-4499-af37-74c388fb8581/change/?_changelist_filters=all%3D">Arroz Integral Vallenorte 750 g</a></th><td class="field-brand nowrap">Vallenorte</td><td class="field-created nowrap">July 13, 2024, 12:46 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="e2307b96-ae6b-4376-bafd-eb8d774fa72b" class="action-select" aria-label="Select this object for an action - Arroz Paisana Extra 5 Kg"></td><th class="field-name"><a href="/admin/products/product/e2307b96-ae6b-4376-bafd-eb8d774fa72b/change/?_changelist_filters=all%3D">Arroz Paisana Extra 5 Kg</a></th><td class="field-brand nowrap">Paisana</td><td class="field-created nowrap">July 13, 2024, 12:47 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="f6718e6f-7e14-41ac-9062-93af14b5d808" class="action-select" aria-label="Select this object for an action - Arroz Superior Añejo Vallenorte 5 Kg"></td><th class="field-name"><a href="/admin/products/product/f6718e6f-7e14-41ac-9062-93af14b5d808/change/?_changelist_filters=all%3D">Arroz Superior Añejo Vallenorte 5 Kg</a></th><td class="field-brand nowrap">Vallenorte</td><td class="field-created nowrap">July 13, 2024, 12:49 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="8c15aee2-1845-4f35-b486-9c9866062f5d" class="action-select" aria-label="Select this object for an action - Arroz Superior Añejo Vallenorte 750 g"></td><th class="field-name"><a href="/admin/products/product/8c15aee2-1845-4f35-b486-9c9866062f5d/change/?_changelist_filters=all%3D">Arroz Superior Añejo Vallenorte 750 g</a></th><td class="field-brand nowrap">Vallenorte</td><td class="field-created nowrap">July 13, 2024, 12:50 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="41825fff-09c0-4b0b-a07b-88711eaaa082" class="action-select" aria-label="Select this object for an action - Arroz Superior Costeño 5 kg"></td><th class="field-name"><a href="/admin/products/product/41825fff-09c0-4b0b-a07b-88711eaaa082/change/?_changelist_filters=all%3D">Arroz Superior Costeño 5 kg</a></th><td class="field-brand nowrap">Costeño</td><td class="field-created nowrap">July 13, 2024, 12:51 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="29c84cc9-8d78-4941-aca2-5b3ddb751adb" class="action-select" aria-label="Select this object for an action - Arroz Superior Costeño 750 g"></td><th class="field-name"><a href="/admin/products/product/29c84cc9-8d78-4941-aca2-5b3ddb751adb/change/?_changelist_filters=all%3D">Arroz Superior Costeño 750 g</a></th><td class="field-brand nowrap">Costeño</td><td class="field-created nowrap">July 13, 2024, 12:52 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="e3d24784-7341-42e6-951c-d9e647d21eeb" class="action-select" aria-label="Select this object for an action - Arroz Superior Faraon x 750 g"></td><th class="field-name"><a href="/admin/products/product/e3d24784-7341-42e6-951c-d9e647d21eeb/change/?_changelist_filters=all%3D">Arroz Superior Faraon x 750 g</a></th><td class="field-brand nowrap">Faraon</td><td class="field-created nowrap">July 13, 2024, 12:55 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="6a94ee42-bdd9-430a-86ad-adb8a0045b74" class="action-select" aria-label="Select this object for an action - Arroz Superior Faraón de 5 Kg"></td><th class="field-name"><a href="/admin/products/product/6a94ee42-bdd9-430a-86ad-adb8a0045b74/change/?_changelist_filters=all%3D">Arroz Superior Faraón de 5 Kg</a></th><td class="field-brand nowrap">Faraon</td><td class="field-created nowrap">July 13, 2024, 12:54 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="f45304f5-fd53-4971-b759-78972116d998" class="action-select" aria-label="Select this object for an action - Arroz Superior GRAN CHALAN Gran Añejo Bolsa 5kg"></td><th class="field-name"><a href="/admin/products/product/f45304f5-fd53-4971-b759-78972116d998/change/?_changelist_filters=all%3D">Arroz Superior GRAN CHALAN Gran Añejo Bolsa 5kg</a></th><td class="field-brand nowrap">Gran Chalan</td><td class="field-created nowrap">July 13, 2024, 12:30 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="777543d6-98a0-4c62-b80c-35b4ef71f22e" class="action-select" aria-label="Select this object for an action - Arroz Superior Gran Chalán 5 kg"></td><th class="field-name"><a href="/admin/products/product/777543d6-98a0-4c62-b80c-35b4ef71f22e/change/?_changelist_filters=all%3D">Arroz Superior Gran Chalán 5 kg</a></th><td class="field-brand nowrap">Gran Chalan</td><td class="field-created nowrap">July 13, 2024, 1:12 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="ad134fd8-bb4a-4c25-bf71-efbd2497c850" class="action-select" aria-label="Select this object for an action - Arroz Superior Gran Chalán 750 g"></td><th class="field-name"><a href="/admin/products/product/ad134fd8-bb4a-4c25-bf71-efbd2497c850/change/?_changelist_filters=all%3D">Arroz Superior Gran Chalán 750 g</a></th><td class="field-brand nowrap">Gran Chalan</td><td class="field-created nowrap">July 13, 2024, 1:14 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="e55d3f0d-6e98-452e-bc9d-00623934c2ba" class="action-select" aria-label="Select this object for an action - Arroz Superior Paisana 1 kg"></td><th class="field-name"><a href="/admin/products/product/e55d3f0d-6e98-452e-bc9d-00623934c2ba/change/?_changelist_filters=all%3D">Arroz Superior Paisana 1 kg</a></th><td class="field-brand nowrap">Paisana</td><td class="field-created nowrap">July 13, 2024, 1:16 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="90b0a2be-7bd1-4eba-a403-eda9249a2b3b" class="action-select" aria-label="Select this object for an action - Arroz Superior Paisana 5 kg"></td><th class="field-name"><a href="/admin/products/product/90b0a2be-7bd1-4eba-a403-eda9249a2b3b/change/?_changelist_filters=all%3D">Arroz Superior Paisana 5 kg</a></th><td class="field-brand nowrap">Paisana</td><td class="field-created nowrap">July 13, 2024, 1:20 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="aaf09bb8-23e6-4c30-a46f-36512b7da06f" class="action-select" aria-label="Select this object for an action - Arroz Superior Tottus 5 kg"></td><th class="field-name"><a href="/admin/products/product/aaf09bb8-23e6-4c30-a46f-36512b7da06f/change/?_changelist_filters=all%3D">Arroz Superior Tottus 5 kg</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 13, 2024, 1:21 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="076b7e2e-c074-4810-8ef1-340000d85629" class="action-select" aria-label="Select this object for an action - Arroz Superior Valle Norte 5 kg"></td><th class="field-name"><a href="/admin/products/product/076b7e2e-c074-4810-8ef1-340000d85629/change/?_changelist_filters=all%3D">Arroz Superior Valle Norte 5 kg</a></th><td class="field-brand nowrap">Vallenorte</td><td class="field-created nowrap">July 13, 2024, 1:28 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="a4814b7e-6693-4100-84f8-e628dfc3be6f" class="action-select" aria-label="Select this object for an action - Arroz Superior Valle Norte 750 g"></td><th class="field-name"><a href="/admin/products/product/a4814b7e-6693-4100-84f8-e628dfc3be6f/change/?_changelist_filters=all%3D">Arroz Superior Valle Norte 750 g</a></th><td class="field-brand nowrap">Vallenorte</td><td class="field-created nowrap">July 13, 2024, 1:30 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="7ce1f898-0479-4842-92b2-42070a28dba2" class="action-select" aria-label="Select this object for an action - Arroz con Pollo, Seco o Aguadito PROVENZAL Sachet 58g"></td><th class="field-name"><a href="/admin/products/product/7ce1f898-0479-4842-92b2-42070a28dba2/change/?_changelist_filters=all%3D">Arroz con Pollo, Seco o Aguadito PROVENZAL Sachet 58g</a></th><td class="field-brand nowrap">Provenzal</td><td class="field-created nowrap">July 30, 2024, 10:49 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2444672f-ddcd-4b4f-ab7a-e316ae338690" class="action-select" aria-label="Select this object for an action - Arroz integral Paisana 1kg"></td><th class="field-name"><a href="/admin/products/product/2444672f-ddcd-4b4f-ab7a-e316ae338690/change/?_changelist_filters=all%3D">Arroz integral Paisana 1kg</a></th><td class="field-brand nowrap">Paisana</td><td class="field-created nowrap">July 13, 2024, 12:43 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="02836049-a4f2-45e2-a294-faf459dc4ca0" class="action-select" aria-label="Select this object for an action - Arroz superior Tottus de 10 kg"></td><th class="field-name"><a href="/admin/products/product/02836049-a4f2-45e2-a294-faf459dc4ca0/change/?_changelist_filters=all%3D">Arroz superior Tottus de 10 kg</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 13, 2024, 1:27 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="ac61eace-ae3a-46c1-b391-f9ac6cb59741" class="action-select" aria-label="Select this object for an action - Arveja Partida Costeño 500 g"></td><th class="field-name"><a href="/admin/products/product/ac61eace-ae3a-46c1-b391-f9ac6cb59741/change/?_changelist_filters=all%3D">Arveja Partida Costeño 500 g</a></th><td class="field-brand nowrap">Costeño</td><td class="field-created nowrap">July 13, 2024, 1:33 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="8870b8c8-1495-434c-a7f9-f5ed8d176fe4" class="action-select" aria-label="Select this object for an action - Arveja Partida Tesoro del Campo 500 g"></td><th class="field-name"><a href="/admin/products/product/8870b8c8-1495-434c-a7f9-f5ed8d176fe4/change/?_changelist_filters=all%3D">Arveja Partida Tesoro del Campo 500 g</a></th><td class="field-brand nowrap">Tesoro del campo</td><td class="field-created nowrap">July 13, 2024, 1:34 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="a1227495-2a8f-4e24-a547-2196dfef3b29" class="action-select" aria-label="Select this object for an action - Arveja Partida Tottus 500 g"></td><th class="field-name"><a href="/admin/products/product/a1227495-2a8f-4e24-a547-2196dfef3b29/change/?_changelist_filters=all%3D">Arveja Partida Tottus 500 g</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 13, 2024, 1:35 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="59287aee-32f8-485b-9168-81a23dcf690f" class="action-select" aria-label="Select this object for an action - Arvejas en conserva tottus x 400g"></td><th class="field-name"><a href="/admin/products/product/59287aee-32f8-485b-9168-81a23dcf690f/change/?_changelist_filters=all%3D">Arvejas en conserva tottus x 400g</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 13, 2024, 1:38 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="f977d2a0-13d9-4415-98dd-39d10b2ba5f8" class="action-select" aria-label="Select this object for an action - Arvejitas verdes en conserva valle fértil 425 g"></td><th class="field-name"><a href="/admin/products/product/f977d2a0-13d9-4415-98dd-39d10b2ba5f8/change/?_changelist_filters=all%3D">Arvejitas verdes en conserva valle fértil 425 g</a></th><td class="field-brand nowrap">Valle Fertil</td><td class="field-created nowrap">July 13, 2024, 1:40 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="a844abe0-a0f3-4002-b33b-b0b7068e61f4" class="action-select" aria-label="Select this object for an action - Azucar Rubia BELL&#x27;S con Stevia Bolsa 500 g"></td><th class="field-name"><a href="/admin/products/product/a844abe0-a0f3-4002-b33b-b0b7068e61f4/change/?_changelist_filters=all%3D">Azucar Rubia BELL&#x27;S con Stevia Bolsa 500 g</a></th><td class="field-brand nowrap">Bell&#x27;s</td><td class="field-created nowrap">July 30, 2024, 9:53 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="d27c97b7-66e3-49ce-b4ab-847aab8f97ac" class="action-select" aria-label="Select this object for an action - Azúcar Rubia BELL&#x27;S Bolsa 5Kg"></td><th class="field-name"><a href="/admin/products/product/d27c97b7-66e3-49ce-b4ab-847aab8f97ac/change/?_changelist_filters=all%3D">Azúcar Rubia BELL&#x27;S Bolsa 5Kg</a></th><td class="field-brand nowrap">Bell&#x27;s</td><td class="field-created nowrap">July 30, 2024, 9:52 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="c1792d30-cce6-44f8-a782-549d3fda6a4b" class="action-select" aria-label="Select this object for an action - Azúcar Rubia BELL&#x27;S SELECCIÓN Bolsa 1 kg"></td><th class="field-name"><a href="/admin/products/product/c1792d30-cce6-44f8-a782-549d3fda6a4b/change/?_changelist_filters=all%3D">Azúcar Rubia BELL&#x27;S SELECCIÓN Bolsa 1 kg</a></th><td class="field-brand nowrap">Bell&#x27;s Selección</td><td class="field-created nowrap">July 30, 2024, 9:54 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="a7cb7443-a28b-480d-86a7-f70f8e8dc92d" class="action-select" aria-label="Select this object for an action - Azúcar Rubia CARTAVIO Bolsa 5 Kg"></td><th class="field-name"><a href="/admin/products/product/a7cb7443-a28b-480d-86a7-f70f8e8dc92d/change/?_changelist_filters=all%3D">Azúcar Rubia CARTAVIO Bolsa 5 Kg</a></th><td class="field-brand nowrap">Cartavio</td><td class="field-created nowrap">July 30, 2024, 9:55 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="821c426e-0a75-48b5-93cf-9aa6bcd323ad" class="action-select" aria-label="Select this object for an action - Azúcar Rubia COSTEÑO Bolsa 1 Kg"></td><th class="field-name"><a href="/admin/products/product/821c426e-0a75-48b5-93cf-9aa6bcd323ad/change/?_changelist_filters=all%3D">Azúcar Rubia COSTEÑO Bolsa 1 Kg</a></th><td class="field-brand nowrap">Costeño</td><td class="field-created nowrap">July 30, 2024, 9:56 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="21a3306e-b0d2-487a-86d7-ec265238ec6e" class="action-select" aria-label="Select this object for an action - Azúcar Rubia COSTEÑO Bolsa 2Kg"></td><th class="field-name"><a href="/admin/products/product/21a3306e-b0d2-487a-86d7-ec265238ec6e/change/?_changelist_filters=all%3D">Azúcar Rubia COSTEÑO Bolsa 2Kg</a></th><td class="field-brand nowrap">Costeño</td><td class="field-created nowrap">July 30, 2024, 10:04 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="eb70cc2f-cb48-4b95-bfd9-5e694820b8f7" class="action-select" aria-label="Select this object for an action - Azúcar Rubia DULFINA Bolsa 1Kg"></td><th class="field-name"><a href="/admin/products/product/eb70cc2f-cb48-4b95-bfd9-5e694820b8f7/change/?_changelist_filters=all%3D">Azúcar Rubia DULFINA Bolsa 1Kg</a></th><td class="field-brand nowrap">Dulfina</td><td class="field-created nowrap">July 30, 2024, 10:05 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="20763889-7f4a-46c5-8d6d-1d279765e50b" class="action-select" aria-label="Select this object for an action - Azúcar Rubia DULFINA Bolsa 2 Kg"></td><th class="field-name"><a href="/admin/products/product/20763889-7f4a-46c5-8d6d-1d279765e50b/change/?_changelist_filters=all%3D">Azúcar Rubia DULFINA Bolsa 2 Kg</a></th><td class="field-brand nowrap">Dulfina</td><td class="field-created nowrap">July 30, 2024, 10:11 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="9fdbc567-6e64-4d6f-a941-8f9fc7f82279" class="action-select" aria-label="Select this object for an action - Azúcar Rubia DULFINA Bolsa 5Kg"></td><th class="field-name"><a href="/admin/products/product/9fdbc567-6e64-4d6f-a941-8f9fc7f82279/change/?_changelist_filters=all%3D">Azúcar Rubia DULFINA Bolsa 5Kg</a></th><td class="field-brand nowrap">Dulfina</td><td class="field-created nowrap">July 30, 2024, 10:15 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="c133899e-b19f-49a8-a3ae-2585581bd6bf" class="action-select" aria-label="Select this object for an action - Azúcar Rubia ONZA Light con Stevia Doypack 500g"></td><th class="field-name"><a href="/admin/products/product/c133899e-b19f-49a8-a3ae-2585581bd6bf/change/?_changelist_filters=all%3D">Azúcar Rubia ONZA Light con Stevia Doypack 500g</a></th><td class="field-brand nowrap">Onza</td><td class="field-created nowrap">July 30, 2024, 10:16 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="6b6e38a8-6e02-420e-a523-428a69fa13c9" class="action-select" aria-label="Select this object for an action - Azúcar Rubia SAN JACINTO Bolsa 5Kg"></td><th class="field-name"><a href="/admin/products/product/6b6e38a8-6e02-420e-a523-428a69fa13c9/change/?_changelist_filters=all%3D">Azúcar Rubia SAN JACINTO Bolsa 5Kg</a></th><td class="field-brand nowrap">San Jacinto</td><td class="field-created nowrap">July 30, 2024, 10:16 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="50c8f422-e312-4d9a-b7e5-a132775e7ae8" class="action-select" aria-label="Select this object for an action - Azúcar impalpable universal 200 g"></td><th class="field-name"><a href="/admin/products/product/50c8f422-e312-4d9a-b7e5-a132775e7ae8/change/?_changelist_filters=all%3D">Azúcar impalpable universal 200 g</a></th><td class="field-brand nowrap">Universal</td><td class="field-created nowrap">July 13, 2024, 1:41 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="625184bf-faa8-4dcc-bfd3-5aa44e17916c" class="action-select" aria-label="Select this object for an action - Azúcar rubia tottus 5 kg"></td><th class="field-name"><a href="/admin/products/product/625184bf-faa8-4dcc-bfd3-5aa44e17916c/change/?_changelist_filters=all%3D">Azúcar rubia tottus 5 kg</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 13, 2024, 1:42 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="5b517e65-393f-43cc-85fc-e733bb31e540" class="action-select" aria-label="Select this object for an action - Barquillo con Crema de Castaña LA IBÉRICA Táper 350g"></td><th class="field-name"><a href="/admin/products/product/5b517e65-393f-43cc-85fc-e733bb31e540/change/?_changelist_filters=all%3D">Barquillo con Crema de Castaña LA IBÉRICA Táper 350g</a></th><td class="field-brand nowrap">La Iberica</td><td class="field-created nowrap">July 30, 2024, 10:26 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="f6dec14d-5c86-4e4b-8c0c-502574683e82" class="action-select" aria-label="Select this object for an action - Barquillo para helado tottus 12 unidades"></td><th class="field-name"><a href="/admin/products/product/f6dec14d-5c86-4e4b-8c0c-502574683e82/change/?_changelist_filters=all%3D">Barquillo para helado tottus 12 unidades</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 13, 2024, 1:44 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="d66d4807-533e-4e11-b8e2-10a41c20d142" class="action-select" aria-label="Select this object for an action - Caja aceite vegetal tottus 900ml 12 unidades"></td><th class="field-name"><a href="/admin/products/product/d66d4807-533e-4e11-b8e2-10a41c20d142/change/?_changelist_filters=all%3D">Caja aceite vegetal tottus 900ml 12 unidades</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 13, 2024, 1:46 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="c5443ae6-3a71-4e73-bd16-5b883d612471" class="action-select" aria-label="Select this object for an action - Canela en polvo badia 56.7 g"></td><th class="field-name"><a href="/admin/products/product/c5443ae6-3a71-4e73-bd16-5b883d612471/change/?_changelist_filters=all%3D">Canela en polvo badia 56.7 g</a></th><td class="field-brand nowrap">Badia</td><td class="field-created nowrap">July 13, 2024, 1:49 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2450fb14-862a-487b-9334-abdfc7318144" class="action-select" aria-label="Select this object for an action - Fideo annellini schar 250 g"></td><th class="field-name"><a href="/admin/products/product/2450fb14-862a-487b-9334-abdfc7318144/change/?_changelist_filters=all%3D">Fideo annellini schar 250 g</a></th><td class="field-brand nowrap">Schar</td><td class="field-created nowrap">July 13, 2024, 1:51 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="4c26d99f-fea8-44f6-8bcf-dbf669bed5dc" class="action-select" aria-label="Select this object for an action - Fideo cabello de ángel Molitalia 250 g"></td><th class="field-name"><a href="/admin/products/product/4c26d99f-fea8-44f6-8bcf-dbf669bed5dc/change/?_changelist_filters=all%3D">Fideo cabello de ángel Molitalia 250 g</a></th><td class="field-brand nowrap">Molitalia</td><td class="field-created nowrap">July 13, 2024, 1:53 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="787977f6-0c66-4cf4-b983-e98524a49679" class="action-select" aria-label="Select this object for an action - Fideo cabello de ángel don vittorio 250 g"></td><th class="field-name"><a href="/admin/products/product/787977f6-0c66-4cf4-b983-e98524a49679/change/?_changelist_filters=all%3D">Fideo cabello de ángel don vittorio 250 g</a></th><td class="field-brand nowrap">Don Vittorio</td><td class="field-created nowrap">July 13, 2024, 1:53 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="df880641-e721-4109-bfde-c3a3f5aae4fa" class="action-select" aria-label="Select this object for an action - Fideo cabello de ángel montanara 250 g"></td><th class="field-name"><a href="/admin/products/product/df880641-e721-4109-bfde-c3a3f5aae4fa/change/?_changelist_filters=all%3D">Fideo cabello de ángel montanara 250 g</a></th><td class="field-brand nowrap">La Montanara</td><td class="field-created nowrap">July 13, 2024, 1:55 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="9956e52e-1e53-401e-a3a9-20dfdda267c3" class="action-select" aria-label="Select this object for an action - Fideo cabello de ángel tottus 250 g"></td><th class="field-name"><a href="/admin/products/product/9956e52e-1e53-401e-a3a9-20dfdda267c3/change/?_changelist_filters=all%3D">Fideo cabello de ángel tottus 250 g</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 13, 2024, 1:58 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="70f3f404-7ddc-4ea4-a297-3856a90150cf" class="action-select" aria-label="Select this object for an action - Fideo canuto grano de oro 250 g"></td><th class="field-name"><a href="/admin/products/product/70f3f404-7ddc-4ea4-a297-3856a90150cf/change/?_changelist_filters=all%3D">Fideo canuto grano de oro 250 g</a></th><td class="field-brand nowrap">Grano De Oro</td><td class="field-created nowrap">July 25, 2024, 11:36 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3ebb779c-61fd-4fd1-b780-51f1f2683726" class="action-select" aria-label="Select this object for an action - Fideo canuto molitalia 250 g"></td><th class="field-name"><a href="/admin/products/product/3ebb779c-61fd-4fd1-b780-51f1f2683726/change/?_changelist_filters=all%3D">Fideo canuto molitalia 250 g</a></th><td class="field-brand nowrap">Molitalia</td><td class="field-created nowrap">July 25, 2024, 11:38 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0091ccd6-1fc9-45cd-b8bc-6db04cc7821e" class="action-select" aria-label="Select this object for an action - Fideo canuto rayado tottus 250 g"></td><th class="field-name"><a href="/admin/products/product/0091ccd6-1fc9-45cd-b8bc-6db04cc7821e/change/?_changelist_filters=all%3D">Fideo canuto rayado tottus 250 g</a></th><td class="field-brand nowrap">Tottus</td><td class="field-created nowrap">July 25, 2024, 11:50 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1382b1a9-bb19-4988-bc1c-113ca38fa439" class="action-select" aria-label="Select this object for an action - Fideo caracol grano de oro 250 g"></td><th class="field-name"><a href="/admin/products/product/1382b1a9-bb19-4988-bc1c-113ca38fa439/change/?_changelist_filters=all%3D">Fideo caracol grano de oro 250 g</a></th><td class="field-brand nowrap">Grano De Oro</td><td class="field-created nowrap">July 25, 2024, 11:51 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="8ba9684a-1e44-4874-a77e-982826b7f206" class="action-select" aria-label="Select this object for an action - Fideo caracol multicereal grano de oro 295 g"></td><th class="field-name"><a href="/admin/products/product/8ba9684a-1e44-4874-a77e-982826b7f206/change/?_changelist_filters=all%3D">Fideo caracol multicereal grano de oro 295 g</a></th><td class="field-brand nowrap">Grano De Oro</td><td class="field-created nowrap">July 26, 2024, 3:14 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="9af5bfbd-4120-4705-a397-9c4e830631cf" class="action-select" aria-label="Select this object for an action - Fideo codito rayado 250 g"></td><th class="field-name"><a href="/admin/products/product/9af5bfbd-4120-4705-a397-9c4e830631cf/change/?_changelist_filters=all%3D">Fideo codito rayado 250 g</a></th><td class="field-brand nowrap">Grano De Oro</td><td class="field-created nowrap">July 26, 2024, 3:16 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="34a23e17-d56f-4fdb-838e-217c396027b6" class="action-select" aria-label="Select this object for an action - Fideos Nicolini Spaghetti 950 gr"></td><th class="field-name"><a href="/admin/products/product/34a23e17-d56f-4fdb-838e-217c396027b6/change/?_changelist_filters=all%3D">Fideos Nicolini Spaghetti 950 gr</a></th><td class="field-brand nowrap">Nicolini</td><td class="field-created nowrap">July 3, 2024, 11:35 a.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2e72b640-c5ae-480f-baa5-d4a07d673c2b" class="action-select" aria-label="Select this object for an action - Ketchup alacena 380 g"></td><th class="field-name"><a href="/admin/products/product/2e72b640-c5ae-480f-baa5-d4a07d673c2b/change/?_changelist_filters=all%3D">Ketchup alacena 380 g</a></th><td class="field-brand nowrap">Alacena</td><td class="field-created nowrap">July 30, 2024, 10:28 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="5fa7895b-e9a4-4b20-b01f-a966fb51ddbd" class="action-select" aria-label="Select this object for an action - Leche Fresca Gloria Uht Entera 1 L"></td><th class="field-name"><a href="/admin/products/product/5fa7895b-e9a4-4b20-b01f-a966fb51ddbd/change/?_changelist_filters=all%3D">Leche Fresca Gloria Uht Entera 1 L</a></th><td class="field-brand nowrap">Gloria</td><td class="field-created nowrap">June 27, 2024, 10:10 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="8f455a02-1d90-4569-b015-97873a94a656" class="action-select" aria-label="Select this object for an action - Pack x6 Leche Evaporada Gloria Entera"></td><th class="field-name"><a href="/admin/products/product/8f455a02-1d90-4569-b015-97873a94a656/change/?_changelist_filters=all%3D">Pack x6 Leche Evaporada Gloria Entera</a></th><td class="field-brand nowrap">Gloria</td><td class="field-created nowrap">Aug. 16, 2024, 1:11 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3f366f44-e120-4d57-8771-522055b06d56" class="action-select" aria-label="Select this object for an action - Sixpack Leche Reconstituida Gloria Lata 390g"></td><th class="field-name"><a href="/admin/products/product/3f366f44-e120-4d57-8771-522055b06d56/change/?_changelist_filters=all%3D">Sixpack Leche Reconstituida Gloria Lata 390g</a></th><td class="field-brand nowrap">Gloria</td><td class="field-created nowrap">Aug. 16, 2024, 12:14 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="9b439617-82c4-41e9-a7a6-1c30af3fc080" class="action-select" aria-label="Select this object for an action - Sixpack Leche Reconstituida Gloria Light Lata 390g"></td><th class="field-name"><a href="/admin/products/product/9b439617-82c4-41e9-a7a6-1c30af3fc080/change/?_changelist_filters=all%3D">Sixpack Leche Reconstituida Gloria Light Lata 390g</a></th><td class="field-brand nowrap">Gloria</td><td class="field-created nowrap">Aug. 16, 2024, 12:44 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="e157b9b7-9ff2-44d8-90b6-9cdfeeadf2a7" class="action-select" aria-label="Select this object for an action - Sixpack Leche Reconstituida Gloria Niños Lata 390g"></td><th class="field-name"><a href="/admin/products/product/e157b9b7-9ff2-44d8-90b6-9cdfeeadf2a7/change/?_changelist_filters=all%3D">Sixpack Leche Reconstituida Gloria Niños Lata 390g</a></th><td class="field-brand nowrap">Gloria</td><td class="field-created nowrap">Aug. 16, 2024, 9:43 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="b1ea9d2f-5ba4-4a13-8264-45a008316e74" class="action-select" aria-label="Select this object for an action - Sixpack Leche Ultrafiltrada Sin Lactosa Gloria Zero Lacto Lata 390g"></td><th class="field-name"><a href="/admin/products/product/b1ea9d2f-5ba4-4a13-8264-45a008316e74/change/?_changelist_filters=all%3D">Sixpack Leche Ultrafiltrada Sin Lactosa Gloria Zero Lacto Lata 390g</a></th><td class="field-brand nowrap">Gloria</td><td class="field-created nowrap">Aug. 16, 2024, 12:49 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="e079dad6-f1a5-44c1-9d3e-7e629d20fdd0" class="action-select" aria-label="Select this object for an action - Sixpack Mezcla Láctea Ideal Cremosita Lata 390g"></td><th class="field-name"><a href="/admin/products/product/e079dad6-f1a5-44c1-9d3e-7e629d20fdd0/change/?_changelist_filters=all%3D">Sixpack Mezcla Láctea Ideal Cremosita Lata 390g</a></th><td class="field-brand nowrap">Ideal</td><td class="field-created nowrap">Aug. 16, 2024, 9:48 p.m.</td></tr>
+
+</tbody>
+</table>
+</div>
+
+
+          
+        
+        
+
+<p class="paginator">
+
+165 products
+
+
+</p>
+
+        </form>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </main>
+    </div>
+</div>
+<!-- END Container -->
+
+<!-- SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>
+</svg>
+<!-- END SVGs -->
+</body>
+</html>
+xcel
